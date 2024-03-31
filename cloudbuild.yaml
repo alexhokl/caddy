@@ -1,6 +1,9 @@
+logsBucket: 'gs://craffy-build-logs'
+
 options:
   machineType: E2_MEDIUM # 1 vCPU
-  logging: CLOUD_LOGGING_ONLY
+  # logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY
 
 steps:
 
