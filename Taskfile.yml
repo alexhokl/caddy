@@ -1,0 +1,16 @@
+version: '3'
+
+env:
+  TAG_NAME: v0.1
+
+tasks:
+
+  image:
+    desc: Docker build
+    cmds:
+    - docker build -t asia-east1-docker.pkg.dev/craffy/public/caddy:$TAG_NAME .
+
+  push:
+    desc: Docker push
+    cmds:
+    - docker push asia-east1-docker.pkg.dev/craffy/public/caddy:$TAG_NAME .
